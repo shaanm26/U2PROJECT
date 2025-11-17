@@ -13,5 +13,27 @@
 // Get age of pet static, age is math random
 // Have choices to do depending on the choice they will surivve or die.
 // INPUT IS NOT CASE SENSSITIVEIE.
+import java.util.Scanner;
+import java.util.Random;
+
+public class PetSim {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        System.out.println("Welcome!");
+        System.out.println("Lets create your pet!");
+
+        System.out.println("Enter your pets name here: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Enter your pets gender here: ");
+        String gender = scanner.nextLine();
+
+        Pet myPet = new Pet(name, gender);
 
 
+    }
+}
