@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Pet{
+public class Pet {
 
     private String name;
     private String gender;
@@ -13,11 +13,19 @@ public class Pet{
         this.isAlive = true;
 
         Random rand = new Random();
-        this.age = rand.nextInt(16)+1; //the pet age limit is 17, this will be used so when choices are made its going to be bad or good, either keeping their lifespan or increasing it to 17.
+        this.age = rand.nextInt(16) + 1; //GAME ENDS at age 17, the goal will be to reach 17 through good choices.
 
         System.out.println("Your pet, " + this.name + "(" + this.gender + ")" + " is age " + this.age + ".");
-
     }
 
+    public int getAge() {
+    return this.age;
+    }
 
+    public String getName() {
+        return this.name;
+    }
+    public boolean isAlive() {
+        return this.isAlive;
+    }
 }

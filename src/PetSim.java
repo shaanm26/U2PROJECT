@@ -33,12 +33,34 @@ public class PetSim {
         String gender = scanner.nextLine();
 
         Pet myPet = new Pet(name, gender);
-//while(myPet.age<17){
-        System.out.println(name + " has awoken!");
+
+        while(myPet.isAlive() && myPet.getAge() < 17) {
+
+            int event = random.nextInt(3); //Later add as many choices but for now 3
+
+            if (event == 0) {
+                System.out.println(myPet.getName() + " is hungry!");
+                System.out.println("Kibble or Chocolate?");
+                String choice = scanner.nextLine();
+
+                if(choice.equalsIgnoreCase("Kibble")) {
+                    System.out.println("Good choice! Your pets age is increased by 1!");
+                } else if (choice.equalsIgnoreCase("Chocolate")){
+                    System.out.println("No! Chocolate is poisonous to animals!");
+                }
+            }
+        }
+
+
+
+
+
+        //while(myPet.age<17){
+       // System.out.println(name + " has awoken!");
         //Choices
-        System.out.println(name + " is hungry!" + " What will you feed them?");
-        System.out.println("Chocolate Cake or Pet food?");
-        String Choice1 = scanner.nextLine();
+       // System.out.println(name + " is hungry!" + " What will you feed them?");
+       // System.out.println("Chocolate Cake or Pet food?");
+       // String Choice1 = scanner.nextLine();
 
 
 
