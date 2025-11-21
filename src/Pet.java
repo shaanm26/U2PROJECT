@@ -19,13 +19,21 @@ public class Pet {
     }
 
     public int getAge() {
-    return this.age;
+        return this.age;
     }
 
     public String getName() {
         return this.name;
     }
+
     public boolean isAlive() {
         return this.isAlive;
     }
-}
+
+    public void ageUp() {
+        age++;
+    }
+       public void ageDeath() {
+            age += 100;
+        }
+    }
