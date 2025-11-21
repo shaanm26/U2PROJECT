@@ -4,9 +4,9 @@
 
 //1. Your project must include at least one class file and one runner file.          | Refer back, constructor.
 //2. Your class file can be a static or non-static class                             | Non-Static Method
-//3. You should be using iteration and conditional statements in some way            | If/else
-//4. Your program should have some sort of "random" element involved                 | Math.Random
-//5. Your program should NOT just be a re-creation of something that already exists. | Has to be original
+//3. You should be using iteration and conditional statements in some way            | If/else for choices
+//4. Your program should have some sort of "random" element involved                 | Math.Random choices
+
 
 //Project: Mini - Pet Simulator
 // Random Pet referred from constructr blahb albha lbah, introduce they get to choose name, age, type of pet.
@@ -33,7 +33,18 @@ public class PetSim {
         String gender = scanner.nextLine();
 
         Pet myPet = new Pet(name, gender);
+//while(myPet.age<17){
+        System.out.println(name + " has awoken!");
+        //Choices
+        System.out.println(name + " is hungry!" + " What will you feed them?");
+        System.out.println("Chocolate Cake or Pet food?");
+        String Choice1 = scanner.nextLine();
+
 
 
     }
+
+
+
 }
+
