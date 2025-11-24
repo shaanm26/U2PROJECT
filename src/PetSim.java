@@ -43,32 +43,35 @@ public class PetSim {
                 System.out.println("Kibble or Chocolate?");
                 String choice = scanner.nextLine();
 
-                if(choice.equalsIgnoreCase("Kibble")) {
+                if (choice.equalsIgnoreCase("Kibble")) {
                     System.out.println("Good choice! Your pets age is increased by 1!");
                     myPet.ageUp();
                     System.out.println("Your pets age is " + myPet.getAge());
 
-                } else if (choice.equalsIgnoreCase("Chocolate")){
+                } else if (choice.equalsIgnoreCase("Chocolate")) {
                     System.out.println("No! Chocolate is poisonous to pets!");
                     myPet.ageDeath();
                     System.out.println("Your pet is dead! Try Again!");
                 }
-            } else if (event == 1) {
+            }
+            else if (event == 1) {
                 System.out.println(myPet.getName() + " is bored!");
                 System.out.println("Pet toy or MORE KIBBLE");
                 String choice = scanner.nextLine();
 
-                if(choice.equalsIgnoreCase("Pet toy")) {
+                if (choice.equalsIgnoreCase("Pet toy")) {
                     System.out.println("Excellent choice! Your pets age is increased by 1!");
                     myPet.ageUp();
                     System.out.println("Your pets age is " + myPet.getAge());
 
-                } else if (choice.equalsIgnoreCase("MORE KIBBLE")){
+                } else if (choice.equalsIgnoreCase("MORE KIBBLE")) {
                     System.out.println(myPet.getName() + " is now morbidly obese! You lose!");
                     myPet.ageDeath();
                     System.out.println("Your pet is dead. Try again!");
+                }
+            }
 
-                } else if (event == 2) {
+                else if (event == 2) {
                     System.out.println(myPet.getName() + " is smelly");
                     System.out.println("Give " + myPet.getName() + " shower with HUMAN SHAMPOO OR PET SHAMPOO");
                     String choice2 = scanner.nextLine();
@@ -83,7 +86,14 @@ public class PetSim {
                 }
             }
 
+        System.out.println("Game Over!");
+        if (myPet.getAge() > 17) {
+            System.out.println(myPet.getName() + " is dead:(");
+        } else {
+            System.out.println("Congratulations! " + myPet.getName() + " has lived a long fulfilling life with you as their owner!");
         }
+    }
+}
 
 
 
@@ -100,9 +110,5 @@ public class PetSim {
 
 
 
-    }
 
-
-
-}
 
