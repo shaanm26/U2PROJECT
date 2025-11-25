@@ -20,7 +20,8 @@ public class Pet {
 
     public int getAge() {
         return this.age;
-    }
+
+}
 
     public String getName() {
         return this.name;
@@ -34,7 +35,7 @@ public class Pet {
         age++;
     }
        public void ageDeath() {
-            age += 100;
+           this.isAlive = false;
         }
 
     }
