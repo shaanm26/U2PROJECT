@@ -13,8 +13,7 @@ public class Pet {
         this.isAlive = true;
 
         Random rand = new Random();
-        this.age = rand.nextInt(16) + 1; //GAME ENDS at age 17, the goal will be to reach 17 through good choices.
-
+        this.age = rand.nextInt(16) + 1;
         System.out.println("Your pet, " + this.name + "(" + this.gender + ")" + " is age " + this.age + ".");
     }
 

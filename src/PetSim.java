@@ -20,9 +20,9 @@ public class PetSim {
 
         Pet myPet = new Pet(name, gender);
 
-        while(myPet.isAlive() && myPet.getAge() < 17) {
+        while (myPet.isAlive() && myPet.getAge() < 17) {
 
-            int event = random.nextInt(3); //Later add as many choices but for now 3
+            int event = random.nextInt(4);
 
             if (event == 0) {
                 System.out.println(myPet.getName() + " is hungry!");
@@ -39,8 +39,7 @@ public class PetSim {
                     myPet.ageDeath();
                     System.out.println("Your pet is dead! Try Again!");
                 }
-            }
-            else if (event == 1) {
+            } else if (event == 1) {
                 System.out.println(myPet.getName() + " is bored!");
                 System.out.println("Pet toy or MORE KIBBLE");
                 String choice = scanner.nextLine();
@@ -55,32 +54,45 @@ public class PetSim {
                     myPet.ageDeath();
                     System.out.println("Your pet is dead. Try again!");
                 }
-            }
+            } else if (event == 2) {
+                System.out.println(myPet.getName() + " is smelly");
+                System.out.println("Give " + myPet.getName() + " shower with HUMAN SHAMPOO OR PET SHAMPOO");
+                String choice2 = scanner.nextLine();
 
-                else if (event == 2) {
-                    System.out.println(myPet.getName() + " is smelly");
-                    System.out.println("Give " + myPet.getName() + " shower with HUMAN SHAMPOO OR PET SHAMPOO");
-                    String choice2 = scanner.nextLine();
+                if (choice2.equalsIgnoreCase("HUMAN SHAMPOO")) {
+                    System.out.println("Bad choice, your pet died.");
+                    myPet.ageDeath();
+                } else if (choice2.equalsIgnoreCase("PET SHAMPOO")) {
+                    System.out.println("Nice! You chose the right shampoo. Your pet age is increased by 1.");
+                    myPet.ageUp();
+                }
+            } else if (event == 3) {
+                System.out.println(myPet.getName() + " is very tired");
+                System.out.println("PLAY MUSIC or WARM BLANKET");
+                String choice3 = scanner.nextLine();
 
-                    if(choice2.equalsIgnoreCase("HUMAN SHAMPOO")) {
-                        System.out.println("Bad choice, your pet died.");
-                        myPet.ageDeath();
-                    } else if (choice2.equalsIgnoreCase("PET SHAMPOO")){
-                        System.out.println("Nice! You chose the right shampoo. Your pet age is increased by 1.");
-                        myPet.ageUp();
-                    }
+                if (choice3.equalsIgnoreCase("PLAY MUSIC")) {
+                    System.out.println("Nobody wants to hear your Taylor Swift! Your pet died.");
+                    myPet.ageDeath();
+                } else if (choice3.equalsIgnoreCase("WARM BLANKET")) {
+                    System.out.println("Good! Your pet loves the warmth. Your pet age is increased by 1.");
+                    myPet.ageUp();
                 }
             }
 
-        System.out.println("Game Over!");
-        if (myPet.isAlive()) {
-            System.out.println("Congratulations! " + myPet.getName() + " has lived a long fulfilling life with you as their owner!");
 
-        } else {
-            System.out.println(myPet.getName() + " is dead:(");
+            System.out.println("Game Over!");
+            if (myPet.isAlive()) {
+                System.out.println("Congratulations! " + myPet.getName() + " has lived a long fulfilling life with you as their owner!");
+
+            } else {
+                System.out.println(myPet.getName() + " is dead:(");
+            }
         }
     }
 }
+
+
 
 
 
